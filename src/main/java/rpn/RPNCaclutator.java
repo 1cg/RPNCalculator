@@ -27,6 +27,15 @@ public class RPNCaclutator {
                     stack.add(val1 + val2);
                 }
             }
+            if ("*".equals(s)) {
+                if (stack.size() < 2) {
+                    System.err.println("Must be two values on the stack");
+                } else {
+                    Integer val1 = stack.removeLast();
+                    Integer val2 = stack.removeLast();
+                    stack.add(val1 * val2);
+                }
+            }
         }
     }
 
